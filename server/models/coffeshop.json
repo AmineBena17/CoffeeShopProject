@@ -1,0 +1,42 @@
+{
+  "name": "coffeshop",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Nom": {
+      "type": "string",
+      "required": true
+    },
+    "numero": {
+      "type": "number",
+      "required": true
+    },
+    "rue": {
+      "type": "string"
+    },
+    "ville": {
+      "type": "string"
+    },
+    "codepostal": {
+      "type": "string",
+      "required": true
+    },
+    "pays": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "horaire": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
