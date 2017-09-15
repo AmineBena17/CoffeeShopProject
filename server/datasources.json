@@ -2,5 +2,14 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "coffeshopRestaurant": {
+    "host": "sqletud.u-pem.fr",
+    "port": 3306,
+    "database": "mlazar_db",
+    "password": "",
+    "name": "coffeshopRestaurant",
+    "user": "",
+    "connector": "mysql"
   }
 }
