@@ -3,13 +3,11 @@
     "name": "db",
     "connector": "memory"
   },
-  "coffeshopRestaurant": {
-    "host": "sqletud.u-pem.fr",
-    "port": 3306,
-    "database": "mlazar_db",
-    "password": "",
-    "name": "coffeshopRestaurant",
-    "user": "",
-    "connector": "mysql"
+  "mongo": {
+    "host": "127.0.0.1",
+    "database": "test",
+    "port": 27017,
+    "name": "mongo",
+    "connector": "mongodb"
   }
 }
