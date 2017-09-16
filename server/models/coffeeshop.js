@@ -2,6 +2,8 @@
 
 module.exports = function(Coffeeshop) {
 
+  /*FILTERS Fields*/
+
   //filter by name
   Coffeeshop.getCoffeeshopByName = function (name, cb) {
     Coffeeshop.findOne({where: {nom : name}}, function (err, resultat) {
@@ -34,6 +36,12 @@ module.exports = function(Coffeeshop) {
       }
     });
   };
+
+  /*UPSERT MODELS WITH FILTER*/
+
+  Coffeeshop.updateCoffeeshopByName = function (name, cb) {
+    //todo
+  }
 
   //Remotes methodes
   Coffeeshop.remoteMethod(
