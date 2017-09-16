@@ -35,7 +35,7 @@
     "dataSource": "mongo",
     "public": false
   },
-  "coffeshop": {
+  "coffeeshop": {
     "dataSource": "mongo",
     "public": true
   },

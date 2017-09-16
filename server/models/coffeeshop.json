@@ -1,5 +1,5 @@
 {
-  "name": "coffeshop",
+  "name": "coffeeshop",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
