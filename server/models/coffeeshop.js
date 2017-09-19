@@ -37,12 +37,6 @@ module.exports = function(Coffeeshop) {
     });
   };
 
-  /*UPSERT MODELS WITH FILTER*/
-
-  Coffeeshop.updateCoffeeshopByName = function (name, cb) {
-    //todo
-  }
-
   //Remotes methodes
   Coffeeshop.remoteMethod(
     'getCoffeeshopByName',
