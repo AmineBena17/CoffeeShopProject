@@ -40,7 +40,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "owner",
+      "foreignKey": "idOwner"
+    }
+  },
   "acls": [],
   "methods": {}
 }
