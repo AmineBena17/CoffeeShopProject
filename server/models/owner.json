@@ -24,7 +24,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "coffeeshops": {
+      "type": "hasMany",
+      "model": "coffeeshop",
+      "foreignKey": "idsCoffeshops"
+    },
+    "restaurants": {
+      "type": "hasMany",
+      "model": "restaurant",
+      "foreignKey": "idsRestaurant"
+    }
+  },
   "acls": [],
   "methods": {}
 }
