@@ -7,8 +7,14 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node . &",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "npm run lint && nsp check",
+    "start": "node .",
+    "start:dev:i": "supervisor --inspect .",
+    "start:dev:d": "DEBUG=loopback:* node .",
+    "start:dev:di": "NODE_ENV=development DEBUG=loopback:* supervisor --inspect .",
+    "start:mongo": "mongod --port 27017 -dbpath",
+    "build": "cd client && npm run build",
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server.js ./client/app/sdk -i disabled"
   },
   "dependencies": {
     "compression": "^1.0.3",
