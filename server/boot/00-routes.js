@@ -17,6 +17,7 @@ module.exports = function (app) {
     }
   });
 
+  //Login
   app.post('/login', function (req, res) {
     User.login({
       email: req.body.email,
@@ -45,11 +46,36 @@ module.exports = function (app) {
     });
   });
 
+//Logout
   app.get('/logout', function(req, res, next) {
-    if (!req.accessToken) return res.sendStatus(401);
-    User.logout(req.accessToken.id, function(err) {
-      if (err) return next(err);
-      res.redirect('/');
+    if (!req.accessToken){
+      return res.sendStatus(401);
+    } else {
+      User.logout(req.accessToken.id, function(err) {
+      if (err){
+        return next(err);
+      } else {
+        res.redirect('/');
+      }
+      });
+    }
+  });
+
+  // Reset Password
+  app.post('/reset-password', function (req, res, next) {
+    User.resetPassword({
+      email: req.body.email;
+      }, function (err) {
+      if(err) {
+        return res.status(401).send(err);
+      } else {
+        res.render('response',{
+          title: 'Le mot de passe est réinitialiser',
+          content: 'Check your email',
+          redirectTo:'\',
+          redirectToLinkText: 'Log In'
+        });
+    }
     });
   });
 }
