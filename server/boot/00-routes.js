@@ -1,14 +1,10 @@
 module.exports = function (app) {
 
   var User = app.models.User;
-  User.create({email: 'amine@amine.com', password: 'amine'}, function (err, userInstance) {
-    if(err) {
-      console.log(err)
-    } else {
-      console.log(userInstance);
-    }
-  });
 
+  User.create({email:'admin@coffeeshoprestaurant.org', password:'admin'}, function (err, cb) {
+    console.log(cb);
+  });
   // Install a "/ping" route that returns "pong"
   // app.get('/', function (req, res, next) {
   //   if (req.isAuthenticated) {

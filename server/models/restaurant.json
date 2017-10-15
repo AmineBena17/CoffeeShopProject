@@ -49,10 +49,43 @@
   },
   "acls": [
     {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
       "accessType": "EXECUTE",
       "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "getRestaurantByName"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "getRestaurantByVille"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "getRestaurantByCommune"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
       "principalId": "$unauthenticated",
-      "permission": "ALLOW"
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY"
     }
   ],
   "methods": {}

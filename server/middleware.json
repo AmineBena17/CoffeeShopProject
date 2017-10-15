@@ -52,13 +52,13 @@
         "paths": [
           "/"
         ],
-        "params": "$!../client/dist"
+        "params": "$!../client/build"
       },
       {
         "paths": [
           "/*"
         ],
-        "params": "$!../client/dist"
+        "params": "$!../client/build"
       }
     ]
   },
